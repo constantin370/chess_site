@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "chess tournament"
+version = "0.1.0"
+description = "children's international chess tournament website"
+authors = ["Константин Мурадян <128979416+constantin370@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.10.11"
+Django = "^5.0.7"
+
+[tool.poetry.group.dev.dependencies]
+django-crispy-forms = "^2.3"
+pillow = "^10.4.0"
+crispy-bootstrap5 = "^2024.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

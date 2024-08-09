@@ -1,0 +1,37 @@
+{% load static %}
+
+<header>
+  <nav class="navbar navbar-light" style="background-color: rgb(6, 55, 255)">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+          <img class="rounded-circle" src="{% static 'img/logo2.png' %}" width="75" height="75" class="d-inline-block align-top" alt="icon dots">
+        </a>
+        <p></p>
+        <div class="btn-group dropend" style="padding-left: 30pt;">
+          <button style="font-family:Arial; background-color:rgb(255, 255, 255); font-weight: bold; color: rgb(0, 0, 0);" type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Медиа
+          </button>     
+          <ul class="dropdown-menu" style="background-color: rgb(209, 209, 209); line-height: 40px;">
+            <li><a href="#" class="styleli nav-link px-2 link-dark">Фото</a></li>
+            <li><a href="{% url 'news:video_list' %}" class="styleli nav-link px-2 link-dark">Видео</a></li>
+          </ul>
+        </div>
+        <div style="padding-left: 10pt;">
+          <a href="https://vk.com/unitedworldchess" target="_blank" class="btn-social btn-vk"><i class="fa fa-vk"></i></a>
+          <a href="https://www.youtube.com/@user-ps7sr1mh8w" target="_blank" class="btn-social btn-youtube"><i class="fa fa-youtube"></i></a>
+          <a href="https://t.me/chessinterturnir" target="_blank" class="telegram"><img src="{% static 'img/Telegram.png' %}" alt="Написать в Телеграм"><i class="telegram-icon"></i></a>
+        </div>
+        </div>
+        <div style="width: 50%;">
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+            <input type="search" class="form-control" placeholder="Поиск..." aria-label="Search">
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+  
+</header>
+
