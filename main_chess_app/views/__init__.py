@@ -1,13 +1,20 @@
 from main_chess_app.views.show_news import NewsListView
 from main_chess_app.views.single_news import NewsDetailView
 from main_chess_app.views.show_category_view import CategoryListView
-from main_chess_app.views.media_list_view import MediaListView
-from main_chess_app.views.video_detail_view import VideoDetailView
+from main_chess_app.views.videos_list_view import VideoListView
+from main_chess_app.views.search_view import Search
+from main_chess_app.views.homepages_view import HomepagesView
+from main_chess_app.views.photo_list_view import PhotoListView
+from main_chess_app.views.show_partners_logo import LogosListView
+
 
 __all__ = (
     'NewsListView',
     'NewsDetailView',
     'CategoryListView',
-    'MediaListView',
-    'VideoDetailView',
+    'VideoListView',
+    'Search',
+    'HomepagesView',
+    'PhotoListView',
+    'LogosListView',
 )

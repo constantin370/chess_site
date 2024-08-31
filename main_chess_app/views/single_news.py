@@ -4,7 +4,7 @@ from main_chess_app.models.news_model import News
 
 
 class NewsDetailView(DetailView):
-    """Публикация."""
+    """Публикация одной новости."""
     model = News
     slug_url_kwarg = "news_slug"
     template_name = "main_chess_app/single_news.html"

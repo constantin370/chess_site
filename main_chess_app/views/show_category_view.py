@@ -10,7 +10,5 @@ class CategoryListView(ListView):
     paginate_by = 3
 
     def get_queryset(self, **kwargs):
-        return News.objects.select_related('cat').filter(
-            cat__slug=self.kwargs['cat_slug'],
-            is_published=True
-            )
+        return News.objects.select_related('cat').filter(cat__slug=self.kwargs['cat_slug'], 
+                                                         is_published=True)

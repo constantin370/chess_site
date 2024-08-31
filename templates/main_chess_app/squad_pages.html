@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Шахматный Турнир
+{% endblock %}
+
+{% block content %}
+
+  <div class="col d-flex justify-content-center">
+
+    {% for team in squad %}
+      <div class="col p-4 d-flex flex-column position-static" style="background-color: rgba(55	58	54);" >
+        <div class="text-center">
+          <h2 class="headline4">{{team.title}}</h2>
+        </div>
+        
+        {% if team.photo %}
+          <p>
+            <img class="border-3 rounded img-fluid img-thumbnail mb-2 mx-auto d-block" src="{{team.photo.url}}" width="320" height="240" alt="dots icon">
+          </p>
+        {% endif %}
+        
+        <div class="text-center">
+          <div class="headline1">
+            {% autoescape on %}
+              <p class="card-text">{{team.content|linebreaks}}</p>
+            {% endautoescape %}
+          </div>
+        </div>
+      </div>
+    {% endfor %} 
+  </div>
+{% include "includes/paginator.html" %}
+{% endblock %}

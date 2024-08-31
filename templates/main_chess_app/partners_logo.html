@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="col d-flex justify-content-center">
+  	{% for logo in logos %}
+			<div class="col p-4 d-flex flex-column position-static">
+					{% if logo.logo %}
+						<a href="{{logo.logo_url}}" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+							<img class="rounded-circle" src="{{logo.logo.url}}" width="275" height="275" class="d-inline-block align-top" alt="icon dots">
+						</a>
+					{% endif %}
+			</div>
+    {% endfor %}
+  </div>
+	{% include "includes/paginator.html" %}
+</div>
+
+{% endblock content %}

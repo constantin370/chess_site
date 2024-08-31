@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="col d-flex justify-content-center">
+    {% for photo in photos %}
+    <div class="col p-4 d-flex flex-column position-static">
+        {% if photo.photo %}
+          <p>
+            <img class="border-3 rounded img-fluid img-thumbnail mb-2 mx-auto d-block" src="{{photo.photo.url}}" width="320" height="240" alt="dots icon">
+          </p>
+        {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+	{% include "includes/paginator.html" %}
+</div>
+
+{% endblock content %}
