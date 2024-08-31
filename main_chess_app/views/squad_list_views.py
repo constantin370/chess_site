@@ -11,4 +11,4 @@ class SquadListView(ListView):
     paginate_by = 3
 
     def get_queryset(self):
-        return get_list_or_404(Squad.objects.filter(is_published=True).order_by("-time_create"))
+        return get_list_or_404(Squad.objects.filter(is_published=True).order_by("time_create"))

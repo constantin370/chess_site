@@ -19,4 +19,4 @@ class Squad(models.Model):
         """Для понятного отображения названий."""
         verbose_name = 'Участники'
         verbose_name_plural = 'Участник'
-        ordering = ['-time_create', 'title']
+        ordering = ['time_create', 'title']
